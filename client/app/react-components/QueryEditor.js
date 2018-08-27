@@ -62,7 +62,7 @@ function buildKeywordsFromSchema(schema) {
     }));
 }
 
-export default class extends React.Component {
+export default class QueryEditor extends React.Component {
   static propTypes = {
     queryText: PropTypes.string.isRequired,
     formatQuery: PropTypes.func.isRequired,

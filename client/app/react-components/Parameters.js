@@ -44,7 +44,7 @@ function parseParameter(origParam, value) {
   return param;
 }
 
-export default class extends React.Component {
+export default class Parameters extends React.Component {
   static propTypes = {
     clientConfig: PropTypes.object.isRequired,
     parameters: PropTypes.array.isRequired,

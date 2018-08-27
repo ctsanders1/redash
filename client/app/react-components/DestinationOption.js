@@ -2,7 +2,27 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Destination from './Destination';
 
-export default class extends React.Component {
+export default class DestinationOption extends React.Component {
+  propTypes = {
+    className: PropTypes.string.isRequired,
+    // isDisabled: PropTypes.bool.isRequired,
+    isFocused: PropTypes.bool.isRequired,
+    isSelected: PropTypes.bool.isRequired,
+    onFocus: PropTypes.func.isRequired,
+    onSelect: PropTypes.func.isRequired,
+    option: PropTypes.shape({
+      destination: PropTypes.shape({
+        destination: PropTypes.shape({
+          icon: PropTypes.string,
+          name: PropTypes.string,
+        }),
+        user: PropTypes.shape({
+          name: PropTypes.string,
+        }),
+      }),
+    }).isRequired,
+  }
+
   handleMouseDown = (event) => {
     event.preventDefault();
     event.stopPropagation();
@@ -34,23 +54,3 @@ export default class extends React.Component {
     );
   }
 }
-
-DestinationOption.propTypes = {
-  className: PropTypes.string.isRequired,
-  // isDisabled: PropTypes.bool.isRequired,
-  isFocused: PropTypes.bool.isRequired,
-  isSelected: PropTypes.bool.isRequired,
-  onFocus: PropTypes.func.isRequired,
-  onSelect: PropTypes.func.isRequired,
-  option: PropTypes.shape({
-    destination: PropTypes.shape({
-      destination: PropTypes.shape({
-        icon: PropTypes.string,
-        name: PropTypes.string,
-      }),
-      user: PropTypes.shape({
-        name: PropTypes.string,
-      }),
-    }),
-  }).isRequired,
-};

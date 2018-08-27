@@ -5,7 +5,7 @@ import 'react-select/dist/react-select.css';
 
 import { ColorPalette } from '@/visualizations/chart/plotly/utils';
 
-export default class extends React.Component {
+export default class ChartSeriesEditor extends React.Component {
   static propTypes = {
     colors: PropTypes.array.isRequired,
     options: PropTypes.object.isRequired,

@@ -31,7 +31,7 @@ const timeSeriesToPlotlySeries = (ss) => {
   return [x, ys];
 };
 
-export default class extends React.Component {
+export default class PlotlyChart extends React.Component {
   static propTypes = {
     options: PropTypes.object.isRequired,
     // eslint-disable-next-line react/no-unused-prop-types
